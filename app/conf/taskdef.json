@@ -1,0 +1,32 @@
+{
+  "executionRoleArn": "arn:aws:iam::xxxxxxxxxxxx:role/Handson-ECSTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "handson",
+      "image": "xxxxxxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/yyyyyy:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/handson",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
+  "family": "handson"
+}

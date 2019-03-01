@@ -1,0 +1,26 @@
+[
+  {
+    "ParameterKey": "TagPrefix",
+    "ParameterValue": "Handson"
+  },
+  {
+    "ParameterKey": "VpcCIDR",
+    "ParameterValue": "172.16.0.0/16"
+  },
+  {
+    "ParameterKey": "PublicSubnetCIDR1",
+    "ParameterValue": "172.16.11.0/24"
+  },
+  {
+    "ParameterKey": "PublicSubnetCIDR2",
+    "ParameterValue": "172.16.12.0/24"
+  },
+  {
+    "ParameterKey": "PrivateSubnetCIDR1",
+    "ParameterValue": "172.16.21.0/24"
+  },
+  {
+    "ParameterKey": "PrivateSubnetCIDR2",
+    "ParameterValue": "172.16.22.0/24"
+  }
+]

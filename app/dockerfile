@@ -1,0 +1,16 @@
+FROM node:10.14.1-alpine
+
+# Deploy application
+ENV APP_HOME /home/node/app
+RUN mkdir -p ${APP_HOME}/node_modules && chown -R node:node ${APP_HOME}
+WORKDIR ${APP_HOME}
+COPY ./src ${APP_HOME}
+
+# Listen port
+ENV PORT 3000
+
+# Start node application
+USER node
+RUN cd ${APP_HOME} && npm install && ls -la
+CMD ["npm", "start"]
+
