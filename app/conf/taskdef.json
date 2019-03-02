@@ -1,9 +1,9 @@
 {
-  "executionRoleArn": "arn:aws:iam::xxxxxxxxxxxx:role/Handson-ECSTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::000000000000:role/Handson-ECSTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "handson",
-      "image": "xxxxxxxxxxxx.dkr.ecr.us-west-2.amazonaws.com/yyyyyy:latest",
+      "name": "node-sample",
+      "image": "000000000000.dkr.ecr.us-west-2.amazonaws.com/node-sample:latest",
       "essential": true,
       "portMappings": [
         {
@@ -28,5 +28,5 @@
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
-  "family": "handson"
+  "family": "handson-task"
 }
